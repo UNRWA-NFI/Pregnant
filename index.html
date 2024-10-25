@@ -1,130 +1,77 @@
 <html dir="rtl" lang="ar">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>فحص حالة الطلب المقدم للاستفادة من طرد الأم والطفل</title>
 </head>
-
 <body>
-    <main>
-        <table cellpadding="0" cellspacing="0" width="100%"
-            style="border-collapse:collapse;margin:0 auto; padding:0; max-width:600px">
-            <tbody>
-                <tr>
-                    <td>
-                        <img alt="Logo" src="img/logo.jpg">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div style="margin: 10px 0; padding: 15px; background-color:#ffffff; border-radius: 6px">
-                            <div style="padding-bottom: 8px; font-size: 13px; text-align: center;">
-
-                                <h1>
-                                    فحص حالة الطلب المقدم للاستفادة من طرد الأم والطفل
-                                </h1>
-                                <h3>
-                                    <a href="https://forms.gle/ogmmFYy9s1T1qGhu9"> يتم مراجعة الطلبات المقدمة عن طريق
-                                        رابط التسجيل بعد 24 إلى 48 ساعة من التسجيل</a>
-                                </h3>
-                                <h3>
-                                    اخر تحديث للبيانات <span id="lastUpdateDate">25/10/2024</span> الساعة <span
-                                        id="lastUpdateTime">16:00</span>
-                                </h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img alt="Logo" src="img/logo.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="r6">
+                        <div class="fs">
+                            <h1>
+                                فحص حالة الطلب المقدم للاستفادة من طرد الأم والطفل
+                            </h1>
+                            <h3>
+                                <a href="https://forms.gle/ogmmFYy9s1T1qGhu9"> يتم مراجعة الطلبات المقدمة عن طريق
+                                    رابط التسجيل بعد 24 إلى 48 ساعة من التسجيل</a>
+                            </h3>
+                            <h3>
+                                اخر تحديث للبيانات <span id="lastUpdateDate">25/10/2024</span> الساعة <span
+                                    id="lastUpdateTime">16:00</span>
+                            </h3>
+                        </div>
+                        <div class="inner-form">
+                            <div class="input-wrap">
+                                <div class="input-field">
+                                    <input type="text" id="id_number" placeholder="ادخل رقم الهوية هنا">
+                                </div>
+                                <button id="search_button" onclick="search()">بحث</button>
                             </div>
-                            <div class="inner-form">
-                                <div class="input-wrap">
-                                    <div class="input-field">
-                                        <input type="text" id="id_number" placeholder="ادخل رقم الهوية هنا">
-                                    </div>
-                                    <button id="search_button" onclick="search()">بحث</button>
-                                </div>
-                                <div style="margin-top: 20px;width: 100%;"></div>
-                                <div id="no"
-                                    style="display: none; font-size: larger; color: red; background-color: rgb(255, 255, 255); border-radius: 6px; width: 95%; box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;">
-                                    بياناتك لا تزال قيد التدقيق الرجاء الانتظار
-                                </div>
-                                <div id="yes"
-                                    style="display: none; background-color: #ffffff; border-radius: 6px; width: 95%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                                    <h2
-                                        style="font-size: 18px; color: #4A217B; margin-bottom: 15px; text-align: center;">
-                                        حالة الطلب الخاص بالطرد</h2>
-                                    <table style="width: 100%; border-collapse: collapse;">
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding: 10px; border-bottom: 1px solid #ddd; width: 30%;">
-                                                    <strong style="color: #4A217B;"> الهوية:</strong>
-                                                </td>
-                                                <td id="id_display"
-                                                    style="padding: 10px; border-bottom: 1px solid #ddd;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong
-                                                        style="color: #4A217B;">حالة الاستلام:</strong></td>
-                                                <td id="pactype" style="padding: 10px; border-bottom: 1px solid #ddd;">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong
-                                                        style="color: #4A217B;">تاريخ الاستلام:</strong></td>
-                                                <td style="padding: 10px; border-bottom: 1px solid #ddd;">غير محدد</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <div id="no">
+                                بياناتك لا تزال قيد التدقيق الرجاء الانتظار
+                            </div>
+                            <div id="yes">
+                                <h2 class="cp">
+                                    حالة الطلب الخاص بالطرد</h2>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="cp">
+                                                الهوية:
+                                            </td>
+                                            <td id="id_display">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cp">
+                                                حالة الاستلام:</td>
+                                            <td id="pactype">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="cp">
+                                                تاريخ الاستلام:</td>
+                                            <td>غير محدد</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <script src="ids.js"></script>
-    <script defer>
-        document.getElementById('lastUpdateTime').innerHTML = lastUpdateTime
-        document.getElementById('lastUpdateDate').innerHTML = lastUpdateDate
-        function search() {
-            let idNumber = parseInt(document.getElementById('id_number').value)
-            let resultNo = document.getElementById('no')
-            let resultYes = document.getElementById('yes')
-            let idDisplay = document.getElementById('id_display')
-            let pactype = document.getElementById('pactype')
-            resultNo.style.display = "none"
-            resultYes.style.display = "none"
-            if (idNumber.toString().length === 9) {
-                idCheck = id1.get(idNumber)
-                if (idCheck === undefined) {
-                    resultNo.style.display = "inline"
-                } else {
-                    idDisplay.innerHTML = idNumber
-                    switch (idCheck) {
-                        case 1:
-                            pactype.innerHTML = 'استفدت من الطرد في وقت سابق'
-
-                            break;
-                        case 2:
-                            pactype.innerHTML = 'تم اعتماد بياناتك سيتم التواصل معكم فور توفر الطرد'
-                            break;
-                        case 3:
-                            pactype.innerHTML = 'للاسف لا تستطيع الاستفادة من الطرد'
-
-                            break;
-                        case 4:
-                            pactype.innerHTML = 'البيانات المقدمة لا تثبت أسبوع الحمل أو اخر تاريخ متوقع للولادة الرجاء اعادة تقديم بياناتك مع التأكد من البيانات المطلوبة'
-
-                            break;
-                    }
-                    resultYes.style.display = "inline"
-                }
-
-            } else {
-                window.alert("رقم هوية خطأ")
-            }
-
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>
