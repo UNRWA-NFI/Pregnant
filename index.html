@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <title>فحص كشف المستلمين اصحاب البيانات المفقودة</title>
+    <title>فحص حالة الطلب المقدم للاستفادة من طرد الأم والطفل</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                                     فحص حالة الطلب المقدم للاستفادة من طرد الأم والطفل
                                 </h1>
                                 <h3>
-                                    يتم مراجعة الطلبات المقدمة عن طريق رابط التسجيل بعد 24 إلى 48 ساعة
+                                    <a href="https://forms.gle/ogmmFYy9s1T1qGhu9"> يتم مراجعة الطلبات المقدمة عن طريق رابط التسجيل بعد 24 إلى 48 ساعة</a>
                                 </h3>
                             </div>
                             <div class="inner-form">
@@ -45,7 +45,7 @@
                                     style="display: none; background-color: #ffffff; border-radius: 6px; width: 95%; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                                     <h2
                                         style="font-size: 18px; color: #4A217B; margin-bottom: 15px; text-align: center;">
-                                        معلومات رب الأسرة</h2>
+                                        حالة الطلب الخاص بالطرد</h2>
                                     <table style="width: 100%; border-collapse: collapse;">
                                         <tbody>
                                             <tr>
@@ -94,14 +94,18 @@
                     idDisplay.innerHTML = idNumber
                     switch (idCheck) {
                         case 1:
-                            pactype.innerHTML = 'تم اعتماد بياناتك سيتم التواصل معك فور توفر الطرد'
+                            pactype.innerHTML = 'استفدت من الطرد في وقت سابق'
+
                             break;
                         case 2:
-                            pactype.innerHTML = 'البيانات المقدمة لا تثبت أسبوع الحمل أو اخر تاريخ متوقع للولادة الرجاء اعادة تقديم البيانات'
-
+                            pactype.innerHTML = 'تم اعتماد بياناتك سيتم التواصل معك فور توفر الطرد'
                             break;
                         case 3:
                             pactype.innerHTML = 'للاسف لا تستطيع الاستفادة من الطرد'
+
+                            break;
+                        case 4:
+                            pactype.innerHTML = 'البيانات المقدمة لا تثبت أسبوع الحمل أو اخر تاريخ متوقع للولادة الرجاء اعادة تقديم بياناتك مع التأكد من البيانات المطلوبة'
 
                             break;
                     }
