@@ -26,9 +26,12 @@
                                     فحص حالة الطلب المقدم للاستفادة من طرد الأم والطفل
                                 </h1>
                                 <h3>
-                                    <a href="https://forms.gle/ogmmFYy9s1T1qGhu9"> يتم مراجعة الطلبات المقدمة عن طريق رابط التسجيل بعد 24 إلى 48 ساعة</a>
-                                <br>
-                                اخر تحديث للبيانات 25/10/2024 الساعة 15:50
+                                    <a href="https://forms.gle/ogmmFYy9s1T1qGhu9"> يتم مراجعة الطلبات المقدمة عن طريق
+                                        رابط التسجيل بعد 24 إلى 48 ساعة</a>
+                                </h3>
+                                <h3>
+                                    اخر تحديث للبيانات <span id="lastUpdateDate">25/10/2024</span> الساعة <span
+                                        id="lastUpdateTime">16:00</span>
                                 </h3>
                             </div>
                             <div class="inner-form">
@@ -80,6 +83,8 @@
     </main>
     <script src="ids.js"></script>
     <script defer>
+        document.getElementById('lastUpdateTime').innerHTML = lastUpdateTime
+        document.getElementById('lastUpdateDate').innerHTML = lastUpdateDate
         function search() {
             let idNumber = parseInt(document.getElementById('id_number').value)
             let resultNo = document.getElementById('no')
@@ -100,7 +105,7 @@
 
                             break;
                         case 2:
-                            pactype.innerHTML = 'تم اعتماد بياناتك سيتم التواصل معك فور توفر الطرد'
+                            pactype.innerHTML = 'تم اعتماد بياناتك سيتم التواصل معكم فور توفر الطرد'
                             break;
                         case 3:
                             pactype.innerHTML = 'للاسف لا تستطيع الاستفادة من الطرد'
